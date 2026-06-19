@@ -51,14 +51,16 @@ jobs:
           comparison-method: exact
           timeout: 10
 
-      - name: "P0 | find 'xyz' → no match"
+      - name: "P0 | find 'l' in 'hello' → positions 2 3"
         id: p0-t3
         uses: classroom-resources/autograding-io-grader@v1
         with:
-          test-name: "P0 | find 'xyz' → no match"
-          command: ./problem0-mmap-find-substrings/solution problem0-mmap-find-substrings/tests/3.txt xyz
+          test-name: "P0 | find 'l' in 'hello' → positions 2 3"
+          command: ./problem0-mmap-find-substrings/solution problem0-mmap-find-substrings/tests/3.txt l
           input: ""
-          expected-output: ""
+          expected-output: |
+            2
+            3
           comparison-method: exact
           timeout: 10
 
